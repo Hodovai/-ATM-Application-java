@@ -1,13 +1,22 @@
 package Service;
 
-public class User  extends Account{
+public class User {
     private String firsName;
     private String lastName;
-    private String age;
+
     private String password;
     private String accountNumber;
     private String accountHolderName;
     private double balance;
+
+    public User(String firsName, String lastName, String password, String accountNumber, String accountHolderName, double balance) {
+        this.firsName = firsName;
+        this.lastName = lastName;
+        this.password = password;
+        this.accountNumber = accountNumber;
+        this.accountHolderName = accountHolderName;
+        this.balance = balance;
+    }
 
     public String getFirsName() {
         return firsName;
@@ -23,14 +32,6 @@ public class User  extends Account{
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
     }
 
     public String getPassword() {
@@ -62,19 +63,6 @@ public class User  extends Account{
     }
 
     public void setBalance(double balance) {
-        this.balance = balance;
-    }
-
-    public User(String firsName, String lastName,
-                String age, String password, String accountNumber,
-                String accountHolderName, double balance) {
-        super();
-        this.firsName = firsName;
-        this.lastName = lastName;
-        this.age = age;
-        this.password = password;
-        this.accountNumber = accountNumber;
-        this.accountHolderName = accountHolderName;
         this.balance = balance;
     }
 }
